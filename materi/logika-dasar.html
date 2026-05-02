@@ -3,31 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi - Logika Dasar</title>
+    <title>Materi: Logika Dasar</title>
+    <!-- Pastikan path CSS benar untuk file di dalam subfolder -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-    <header style="padding: 40px 0;">
+    <header style="padding: 40px 0; text-align: left;">
         <div class="container">
-            <a href="../index.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">← Kembali</a>
-            <h1 style="margin-top: 20px;">Logika <span class="text-blue">Dasar</span></h1>
+            <a href="../index.html" style="text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem;">← Kembali ke Beranda</a>
+            <h1 style="margin-top: 15px; font-size: 2.2rem;">Logika <span class="text-blue">Dasar</span></h1>
         </div>
     </header>
 
     <main class="container">
-        <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
-            <h2 style="margin-bottom: 20px;">Pengenalan Proposisi</h2>
-            <p>Ini adalah halaman materi dummy. Anda bisa menuliskan penjelasan materi belajar Anda di sini menggunakan tag standar HTML seperti <code>&lt;p&gt;</code>, <code>&lt;h2&gt;</code>, atau <code>&lt;ul&gt;</code>.</p>
+        <!-- Area Konten Utama -->
+        <article style="background: var(--white); padding: 40px; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow);">
             
-            <div style="background: var(--primary-soft); padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--primary);">
-                <strong>Info:</strong> Folder materi berada di dalam folder <code>/materi/</code>, sehingga link CSS-nya harus menggunakan <code>../css/style.css</code>.
+            <h2 style="color: var(--text-dark); margin-bottom: 15px;">Pengenalan Proposisi</h2>
+            
+            <p style="margin-bottom: 20px; color: var(--text-gray);">
+                Ini adalah halaman materi dummy. Anda bisa menuliskan penjelasan materi belajar Anda di sini menggunakan tag standar HTML seperti:
+            </p>
+
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: var(--text-gray);">
+                <li>Tag <code>&lt;p&gt;</code> untuk paragraf.</li>
+                <li>Tag <code>&lt;h2&gt;</code> untuk sub-judul.</li>
+                <li>Tag <code>&lt;ul&gt;</code> dan <code>&lt;li&gt;</code> untuk daftar (list).</li>
+            </ul>
+
+            <!-- Widget Info Box -->
+            <div style="background: var(--primary-soft); padding: 20px; border-radius: 12px; border-left: 5px solid var(--primary); margin-top: 30px;">
+                <p style="margin: 0; color: var(--primary); font-weight: 600;">
+                    💡 Info Penting:
+                </p>
+                <p style="margin: 5px 0 0; font-size: 0.95rem; color: var(--text-dark);">
+                    Folder materi berada di dalam folder <code>/materi/</code>, sehingga link CSS-nya harus menggunakan <code>../css/style.css</code> agar tampilan tetap cerah dan konsisten.
+                </p>
             </div>
-        </div>
+
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 Portal Belajar</p>
+        <div class="container">
+            <p>&copy; 2026 Portal Belajar Anda</p>
+        </div>
     </footer>
 
 </body>
