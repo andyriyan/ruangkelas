@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Materi Persamaan Kuadrat — bentuk umum, diskriminan, metode penyelesaian, dan hubungan akar.">
+  <title>Persamaan Kuadrat — Kelas Digital</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="navbar-brand">
+      <div class="brand-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <span>Kelas Digital</span>
+    </a>
+    <div class="navbar-actions">
+      <button class="btn-toggle-dark" id="btnDark" aria-label="Toggle mode gelap">
+        <i class="fas fa-moon" id="iconDark"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="materi-header">
+  <div class="container">
+    <a href="../index.html" class="btn-back">
+      <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+    </a>
+    <h1>Persamaan Kuadrat</h1>
+    <p class="subtitle">Memahami bentuk umum, diskriminan, dan tiga metode penyelesaian persamaan kuadrat.</p>
+    <div class="materi-meta-bar">
+      <span class="meta-badge"><i class="fas fa-tag"></i> Aljabar</span>
+      <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Kelas IX</span>
+      <span class="meta-badge"><i class="fas fa-clock"></i> ±60 menit</span>
+    </div>
+  </div>
+</header>
+
+<!-- KONTEN -->
+<main class="container">
+  <article class="content-article animate-in">
+
+    <!-- Daftar Isi -->
+    <nav class="toc" aria-label="Daftar isi">
+      <div class="toc-title"><i class="fas fa-list"></i> Daftar Isi</div>
+      <ol>
+        <li><a href="#pengertian">Pengertian &amp; Bentuk Umum</a></li>
+        <li><a href="#pemfaktoran">Metode Pemfaktoran</a></li>
+        <li><a href="#melengkapi-kuadrat">Melengkapi Kuadrat Sempurna</a></li>
+        <li><a href="#rumus-abc">Rumus ABC (Kuadratik)</a></li>
+        <li><a href="#diskriminan">Diskriminan &amp; Jenis Akar</a></li>
+        <li><a href="#hubungan-akar">Hubungan Akar-akar</a></li>
+        <li><a href="#contoh-soal">Contoh Soal</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Pengertian -->
+    <h2 id="pengertian"><i class="fas fa-info-circle text-primary"></i> 1. Pengertian &amp; Bentuk Umum</h2>
+    <p>
+      Persamaan kuadrat (dalam satu variabel) adalah persamaan polinomial berderajat 2 dengan satu variabel.
+    </p>
+    <div class="box-formula">
+      <strong>Bentuk Umum:</strong>
+      \[ax^2 + bx + c = 0, \quad a \neq 0\]
+      di mana \(a\), \(b\), \(c\) adalah konstanta real, dan \(x\) adalah variabel yang dicari.
+    </div>
+
+    <div class="box-info">
+      <strong>Contoh:</strong> \(2x^2 - 5x + 3 = 0\) di mana \(a=2,\ b=-5,\ c=3\).
+    </div>
+
+    <!-- 2. Pemfaktoran -->
+    <h2 id="pemfaktoran"><i class="fas fa-divide text-primary"></i> 2. Metode Pemfaktoran</h2>
+    <p>Jika persamaan bisa difaktorkan, maka:</p>
+    \[ax^2 + bx + c = a(x - x_1)(x - x_2) = 0\]
+    <p>sehingga \(x = x_1\) atau \(x = x_2\).</p>
+
+    <div class="box-example">
+      <strong>📝 Contoh:</strong> Selesaikan \(x^2 - 5x + 6 = 0\)
+    </div>
+    <ol class="step-list">
+      <li><span class="step-num">1</span> Cari dua bilangan yang <strong>berjumlah</strong> \(-5\) dan <strong>berproduk</strong> \(6\) → hasilnya \(-2\) dan \(-3\).</li>
+      <li><span class="step-num">2</span> Faktorkan: \((x-2)(x-3) = 0\)</li>
+      <li><span class="step-num">3</span> Maka \(x = 2\) atau \(x = 3\) ✅</li>
+    </ol>
+
+    <!-- 3. Melengkapi kuadrat -->
+    <h2 id="melengkapi-kuadrat"><i class="fas fa-square-root-alt text-primary"></i> 3. Melengkapi Kuadrat Sempurna</h2>
+    <p>Teknik ini mengubah persamaan ke bentuk \((x + p)^2 = q\).</p>
+
+    <ol class="step-list">
+      <li><span class="step-num">1</span> Bagi semua suku dengan \(a\) (jika \(a \neq 1\)).</li>
+      <li><span class="step-num">2</span> Pindahkan konstanta ke kanan.</li>
+      <li><span class="step-num">3</span> Tambahkan \(\left(\dfrac{b}{2a}\right)^2\) ke kedua ruas.</li>
+      <li><span class="step-num">4</span> Faktorkan sisi kiri sebagai kuadrat sempurna.</li>
+      <li><span class="step-num">5</span> Akarkan kedua sisi dan selesaikan.</li>
+    </ol>
+
+    <div class="box-example">
+      <strong>📝 Contoh:</strong> Selesaikan \(x^2 + 4x - 5 = 0\)
+    </div>
+    <div class="math-display">
+      \[x^2 + 4x = 5\]
+      \[x^2 + 4x + 4 = 5 + 4\]
+      \[(x+2)^2 = 9\]
+      \[x + 2 = \pm 3\]
+      \[x = 1 \quad \text{atau} \quad x = -5\]
+    </div>
+
+    <!-- 4. Rumus ABC -->
+    <h2 id="rumus-abc"><i class="fas fa-calculator text-primary"></i> 4. Rumus ABC (Rumus Kuadratik)</h2>
+    <p>Metode paling umum dan selalu bisa diterapkan:</p>
+    <div class="box-formula">
+      <strong>Rumus ABC:</strong>
+      \[x_{1,2} = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+    </div>
+
+    <div class="box-example">
+      <strong>📝 Contoh:</strong> Selesaikan \(2x^2 - 3x - 2 = 0\)
+    </div>
+    <ol class="step-list">
+      <li><span class="step-num">1</span> Identifikasi: \(a=2,\ b=-3,\ c=-2\)</li>
+      <li><span class="step-num">2</span> \(\displaystyle x = \frac{3 \pm \sqrt{9 + 16}}{4} = \frac{3 \pm \sqrt{25}}{4} = \frac{3 \pm 5}{4}\)</li>
+      <li><span class="step-num">3</span> \(x_1 = \dfrac{3+5}{4} = 2\) dan \(x_2 = \dfrac{3-5}{4} = -\dfrac{1}{2}\) ✅</li>
+    </ol>
+
+    <!-- 5. Diskriminan -->
+    <h2 id="diskriminan"><i class="fas fa-chart-bar text-primary"></i> 5. Diskriminan &amp; Jenis Akar</h2>
+    <div class="box-formula">
+      <strong>Diskriminan:</strong>
+      \[D = b^2 - 4ac\]
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Kondisi \(D\)</th>
+            <th>Jenis Akar</th>
+            <th>Grafik</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>\(D > 0\)</td><td>Dua akar real berbeda (\(x_1 \neq x_2\))</td><td>Memotong sumbu-\(x\) di dua titik</td></tr>
+          <tr><td>\(D = 0\)</td><td>Dua akar real sama (\(x_1 = x_2\))</td><td>Menyinggung sumbu-\(x\)</td></tr>
+          <tr><td>\(D &lt; 0\)</td><td>Tidak ada akar real (akar imajiner)</td><td>Tidak memotong sumbu-\(x\)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 6. Hubungan akar -->
+    <h2 id="hubungan-akar"><i class="fas fa-link text-primary"></i> 6. Hubungan Akar-akar (Vieta)</h2>
+    <p>Jika \(x_1\) dan \(x_2\) adalah akar-akar dari \(ax^2 + bx + c = 0\), maka:</p>
+    <div class="box-formula">
+      <strong>Teorema Vieta:</strong>
+      \[x_1 + x_2 = -\dfrac{b}{a} \qquad \text{dan} \qquad x_1 \cdot x_2 = \dfrac{c}{a}\]
+    </div>
+
+    <div class="box-tip">
+      <strong>💡 Manfaat:</strong> Rumus Vieta memungkinkan kita menentukan jumlah dan hasil kali akar tanpa mencari akar secara eksplisit!
+    </div>
+
+    <!-- 7. Contoh Soal -->
+    <h2 id="contoh-soal"><i class="fas fa-pencil-alt text-primary"></i> 7. Contoh Soal Latihan</h2>
+
+    <div class="box-example">
+      <strong>📝 Soal 1</strong> — Tentukan diskriminan dan jenis akar dari \(3x^2 - 6x + 3 = 0\).
+    </div>
+    <p><strong>Penyelesaian:</strong> \(D = (-6)^2 - 4(3)(3) = 36 - 36 = 0\) → <strong>Dua akar real yang sama</strong>.</p>
+    <p>Akar: \(\displaystyle x = \frac{6}{2 \cdot 3} = 1\). Jadi \(x_1 = x_2 = 1\). ✅</p>
+
+    <div class="box-example">
+      <strong>📝 Soal 2</strong> — Jika akar-akar \(x^2 + px + 12 = 0\) memenuhi \(x_1 + x_2 = -7\), tentukan \(p\) dan \(x_1 \cdot x_2\).
+    </div>
+    <ol class="step-list">
+      <li><span class="step-num">1</span> Dari Vieta: \(x_1 + x_2 = -p = -7\), maka \(p = 7\).</li>
+      <li><span class="step-num">2</span> \(x_1 \cdot x_2 = \dfrac{c}{a} = \dfrac{12}{1} = 12\). ✅</li>
+    </ol>
+
+    <div class="box-warning">
+      <strong>⚠️ Jebakan Umum:</strong> Saat menggunakan Rumus ABC, pastikan persamaan sudah dalam bentuk \(= 0\) terlebih dahulu sebelum mengidentifikasi \(a\), \(b\), \(c\)!
+    </div>
+
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Kelas Digital Matematika</div>
+  <div class="accent-line"></div>
+  <p>© 2026 · Tema NU Premium Aswaja · GitHub Pages</p>
+</footer>
+
+<!-- MathJax -->
+<script>
+  MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<script>
+  const btn = document.getElementById('btnDark');
+  const icon = document.getElementById('iconDark');
+  if (localStorage.getItem('darkMode') === '1') {
+    document.body.classList.add('dark-mode');
+    icon.className = 'fas fa-sun';
+  }
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('darkMode', isDark ? '1' : '0');
+  });
+</script>
+</body>
+</html>

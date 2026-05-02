@@ -1,55 +1,257 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi: Logika Dasar</title>
-    <!-- Pastikan path CSS benar untuk file di dalam subfolder -->
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Materi Logika Dasar dan Proposisi — mengenal pernyataan, nilai kebenaran, konektor logika, dan tabel kebenaran.">
+  <title>Logika Dasar & Proposisi — Kelas Digital</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-    <header style="padding: 40px 0; text-align: left;">
-        <div class="container">
-            <a href="../index.html" style="text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem;">← Kembali ke Beranda</a>
-            <h1 style="margin-top: 15px; font-size: 2.2rem;">Logika <span class="text-blue">Dasar</span></h1>
-        </div>
-    </header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="navbar-brand">
+      <div class="brand-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <span>Kelas Digital</span>
+    </a>
+    <div class="navbar-actions">
+      <button class="btn-toggle-dark" id="btnDark" aria-label="Toggle mode gelap">
+        <i class="fas fa-moon" id="iconDark"></i>
+      </button>
+    </div>
+  </div>
+</nav>
 
-    <main class="container">
-        <!-- Area Konten Utama -->
-        <article style="background: var(--white); padding: 40px; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow);">
-            
-            <h2 style="color: var(--text-dark); margin-bottom: 15px;">Pengenalan Proposisi</h2>
-            
-            <p style="margin-bottom: 20px; color: var(--text-gray);">
-                Ini adalah halaman materi dummy. Anda bisa menuliskan penjelasan materi belajar Anda di sini menggunakan tag standar HTML seperti:
-            </p>
+<!-- MATERI HEADER -->
+<header class="materi-header">
+  <div class="container">
+    <a href="../index.html" class="btn-back">
+      <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+    </a>
+    <h1>Logika Dasar &amp; Proposisi</h1>
+    <p class="subtitle">Fondasi berpikir matematis: pernyataan, nilai kebenaran, dan konektor logika.</p>
+    <div class="materi-meta-bar">
+      <span class="meta-badge"><i class="fas fa-tag"></i> Logika</span>
+      <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Kelas X</span>
+      <span class="meta-badge"><i class="fas fa-clock"></i> ±45 menit</span>
+    </div>
+  </div>
+</header>
 
-            <ul style="margin-left: 20px; margin-bottom: 20px; color: var(--text-gray);">
-                <li>Tag <code>&lt;p&gt;</code> untuk paragraf.</li>
-                <li>Tag <code>&lt;h2&gt;</code> untuk sub-judul.</li>
-                <li>Tag <code>&lt;ul&gt;</code> dan <code>&lt;li&gt;</code> untuk daftar (list).</li>
-            </ul>
+<!-- KONTEN -->
+<main class="container">
+  <article class="content-article animate-in">
 
-            <!-- Widget Info Box -->
-            <div style="background: var(--primary-soft); padding: 20px; border-radius: 12px; border-left: 5px solid var(--primary); margin-top: 30px;">
-                <p style="margin: 0; color: var(--primary); font-weight: 600;">
-                    💡 Info Penting:
-                </p>
-                <p style="margin: 5px 0 0; font-size: 0.95rem; color: var(--text-dark);">
-                    Folder materi berada di dalam folder <code>/materi/</code>, sehingga link CSS-nya harus menggunakan <code>../css/style.css</code> agar tampilan tetap cerah dan konsisten.
-                </p>
-            </div>
+    <!-- Daftar Isi -->
+    <nav class="toc" aria-label="Daftar isi">
+      <div class="toc-title"><i class="fas fa-list"></i> Daftar Isi</div>
+      <ol>
+        <li><a href="#proposisi">Pengertian Proposisi</a></li>
+        <li><a href="#nilai-kebenaran">Nilai Kebenaran</a></li>
+        <li><a href="#konektor">Konektor Logika</a></li>
+        <li><a href="#tabel-kebenaran">Tabel Kebenaran</a></li>
+        <li><a href="#hukum-logika">Hukum-Hukum Logika</a></li>
+        <li><a href="#contoh-soal">Contoh Soal</a></li>
+      </ol>
+    </nav>
 
-        </article>
-    </main>
+    <!-- 1. Proposisi -->
+    <h2 id="proposisi"><i class="fas fa-comment-dots text-primary"></i> 1. Pengertian Proposisi</h2>
+    <p>
+      <strong>Proposisi</strong> adalah pernyataan yang memiliki nilai kebenaran yang pasti, yaitu <strong>benar (B)</strong> atau <strong>salah (S)</strong>, tidak keduanya sekaligus.
+    </p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Portal Belajar Anda</p>
-        </div>
-    </footer>
+    <div class="box-info">
+      <strong>💡 Ingat:</strong> Kalimat tanya, kalimat perintah, dan kalimat yang tidak dapat ditentukan kebenarannya <em>bukan</em> proposisi.
+    </div>
 
+    <h3>Contoh Proposisi Valid</h3>
+    <ul>
+      <li>Jakarta adalah ibu kota Indonesia. <strong>(Benar)</strong></li>
+      <li>\(2 + 2 = 5\) <strong>(Salah)</strong></li>
+      <li>Semua bilangan prima adalah ganjil. <strong>(Salah — 2 adalah prima dan genap)</strong></li>
+    </ul>
+
+    <h3>Bukan Proposisi</h3>
+    <ul>
+      <li>"Berapa \(2 + 2\)?" — kalimat tanya.</li>
+      <li>"Kerjakan soal ini!" — kalimat perintah.</li>
+      <li>"Dia cantik." — subjektif, tidak dapat ditentukan.</li>
+    </ul>
+
+    <!-- 2. Nilai Kebenaran -->
+    <h2 id="nilai-kebenaran"><i class="fas fa-toggle-on text-primary"></i> 2. Nilai Kebenaran</h2>
+    <p>
+      Setiap proposisi memiliki satu nilai kebenaran. Dilambangkan dengan huruf kapital seperti \(p\), \(q\), \(r\), dst.
+    </p>
+    <div class="box-formula">
+      <strong>Notasi:</strong>
+      \[p : \text{"Hari ini hujan"} \quad \Rightarrow \quad p = \mathbf{B} \text{ atau } p = \mathbf{S}\]
+    </div>
+
+    <!-- 3. Konektor Logika -->
+    <h2 id="konektor"><i class="fas fa-sitemap text-primary"></i> 3. Konektor Logika</h2>
+    <p>Dua proposisi atau lebih dapat digabungkan menggunakan konektor (operator) logika:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Simbol</th>
+            <th>Dibaca</th>
+            <th>Contoh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Negasi</td><td>\(\neg p\)</td><td>bukan p</td><td>\(\neg p\) : "Hari ini tidak hujan"</td></tr>
+          <tr><td>Konjungsi</td><td>\(p \wedge q\)</td><td>p dan q</td><td>Hujan dan dingin</td></tr>
+          <tr><td>Disjungsi</td><td>\(p \vee q\)</td><td>p atau q</td><td>Hujan atau angin</td></tr>
+          <tr><td>Implikasi</td><td>\(p \Rightarrow q\)</td><td>jika p maka q</td><td>Jika hujan maka basah</td></tr>
+          <tr><td>Biimplikasi</td><td>\(p \Leftrightarrow q\)</td><td>p jika dan hanya jika q</td><td>Hujan ↔ basah</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 4. Tabel Kebenaran -->
+    <h2 id="tabel-kebenaran"><i class="fas fa-table text-primary"></i> 4. Tabel Kebenaran</h2>
+
+    <h3>Negasi \(\neg p\)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>\(p\)</th><th>\(\neg p\)</th></tr></thead>
+        <tbody>
+          <tr><td>B</td><td>S</td></tr>
+          <tr><td>S</td><td>B</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Konjungsi \(p \wedge q\)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>\(p\)</th><th>\(q\)</th><th>\(p \wedge q\)</th></tr></thead>
+        <tbody>
+          <tr><td>B</td><td>B</td><td><strong>B</strong></td></tr>
+          <tr><td>B</td><td>S</td><td>S</td></tr>
+          <tr><td>S</td><td>B</td><td>S</td></tr>
+          <tr><td>S</td><td>S</td><td>S</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box-tip">
+      <strong>💡 Tips:</strong> Konjungsi bernilai <strong>Benar hanya jika kedua</strong> proposisi Benar.
+      Disjungsi bernilai <strong>Salah hanya jika kedua</strong> proposisi Salah.
+    </div>
+
+    <h3>Implikasi \(p \Rightarrow q\)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>\(p\)</th><th>\(q\)</th><th>\(p \Rightarrow q\)</th></tr></thead>
+        <tbody>
+          <tr><td>B</td><td>B</td><td>B</td></tr>
+          <tr><td>B</td><td>S</td><td><strong>S</strong></td></tr>
+          <tr><td>S</td><td>B</td><td>B</td></tr>
+          <tr><td>S</td><td>S</td><td>B</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box-warning">
+      <strong>⚠️ Perhatian:</strong> Implikasi hanya <strong>Salah</strong> jika hipotesis (<em>p</em>) Benar dan kesimpulan (<em>q</em>) Salah.
+    </div>
+
+    <!-- 5. Hukum Logika -->
+    <h2 id="hukum-logika"><i class="fas fa-gavel text-primary"></i> 5. Hukum-Hukum Logika</h2>
+    <ul>
+      <li><strong>Hukum Identitas:</strong> \(p \vee S \equiv p\) dan \(p \wedge B \equiv p\)</li>
+      <li><strong>Hukum Dominasi:</strong> \(p \vee B \equiv B\) dan \(p \wedge S \equiv S\)</li>
+      <li><strong>Hukum De Morgan:</strong>
+        \[\neg(p \wedge q) \equiv \neg p \vee \neg q\]
+        \[\neg(p \vee q) \equiv \neg p \wedge \neg q\]
+      </li>
+      <li><strong>Hukum Kontraposisi:</strong> \((p \Rightarrow q) \equiv (\neg q \Rightarrow \neg p)\)</li>
+    </ul>
+
+    <!-- 6. Contoh Soal -->
+    <h2 id="contoh-soal"><i class="fas fa-pencil-alt text-primary"></i> 6. Contoh Soal</h2>
+
+    <div class="box-example">
+      <strong>📝 Soal 1</strong>
+      Diketahui \(p\) = "4 adalah bilangan genap" (B) dan \(q\) = "5 adalah bilangan prima" (B).
+      Tentukan nilai kebenaran \(p \Rightarrow \neg q\).
+    </div>
+    <p><strong>Penyelesaian:</strong></p>
+    <ol class="step-list">
+      <li><span class="step-num">1</span> \(\neg q\) = "5 bukan bilangan prima" → <strong>Salah</strong></li>
+      <li><span class="step-num">2</span> \(p \Rightarrow \neg q\) berarti B → S → <strong>Salah</strong></li>
+    </ol>
+
+    <div class="box-example">
+      <strong>📝 Soal 2</strong>
+      Buktikan bahwa \(\neg(p \vee q) \equiv \neg p \wedge \neg q\) menggunakan tabel kebenaran!
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>\(p\)</th><th>\(q\)</th>
+            <th>\(p \vee q\)</th>
+            <th>\(\neg(p \vee q)\)</th>
+            <th>\(\neg p\)</th>
+            <th>\(\neg q\)</th>
+            <th>\(\neg p \wedge \neg q\)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>B</td><td>B</td><td>B</td><td>S</td><td>S</td><td>S</td><td>S</td></tr>
+          <tr><td>B</td><td>S</td><td>B</td><td>S</td><td>S</td><td>B</td><td>S</td></tr>
+          <tr><td>S</td><td>B</td><td>B</td><td>S</td><td>B</td><td>S</td><td>S</td></tr>
+          <tr><td>S</td><td>S</td><td>S</td><td>B</td><td>B</td><td>B</td><td>B</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Kolom 4 dan kolom 7 identik → terbukti! ✅</p>
+
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Kelas Digital Matematika</div>
+  <div class="accent-line"></div>
+  <p>© 2026 · Tema NU Premium Aswaja · GitHub Pages</p>
+</footer>
+
+<!-- MathJax -->
+<script>
+  MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<script>
+  // Dark mode
+  const btn = document.getElementById('btnDark');
+  const icon = document.getElementById('iconDark');
+  if (localStorage.getItem('darkMode') === '1') {
+    document.body.classList.add('dark-mode');
+    icon.className = 'fas fa-sun';
+  }
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('darkMode', isDark ? '1' : '0');
+  });
+</script>
 </body>
 </html>

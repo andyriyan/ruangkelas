@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Materi Trigonometri — rasio sin, cos, tan, sudut istimewa, dan identitas dasar trigonometri.">
+  <title>Pengenalan Trigonometri — Kelas Digital</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="navbar-brand">
+      <div class="brand-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <span>Kelas Digital</span>
+    </a>
+    <div class="navbar-actions">
+      <button class="btn-toggle-dark" id="btnDark" aria-label="Toggle mode gelap">
+        <i class="fas fa-moon" id="iconDark"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="materi-header">
+  <div class="container">
+    <a href="../index.html" class="btn-back">
+      <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+    </a>
+    <h1>Pengenalan Trigonometri</h1>
+    <p class="subtitle">Rasio sin, cos, tan pada segitiga siku-siku, sudut istimewa, dan identitas dasar.</p>
+    <div class="materi-meta-bar">
+      <span class="meta-badge"><i class="fas fa-tag"></i> Trigonometri</span>
+      <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Kelas X</span>
+      <span class="meta-badge"><i class="fas fa-clock"></i> ±60 menit</span>
+    </div>
+  </div>
+</header>
+
+<!-- KONTEN -->
+<main class="container">
+  <article class="content-article animate-in">
+
+    <nav class="toc">
+      <div class="toc-title"><i class="fas fa-list"></i> Daftar Isi</div>
+      <ol>
+        <li><a href="#segitiga">Segitiga Siku-siku</a></li>
+        <li><a href="#rasio">Rasio Trigonometri</a></li>
+        <li><a href="#sudut-istimewa">Nilai Sudut Istimewa</a></li>
+        <li><a href="#identitas">Identitas Trigonometri Dasar</a></li>
+        <li><a href="#kuadran">Tanda pada Setiap Kuadran</a></li>
+        <li><a href="#contoh-soal">Contoh Soal</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Segitiga -->
+    <h2 id="segitiga"><i class="fas fa-draw-polygon text-primary"></i> 1. Segitiga Siku-siku</h2>
+    <p>Trigonometri dipelajari pertama kali pada segitiga siku-siku, yaitu segitiga yang memiliki satu sudut \(90°\).</p>
+
+    <div class="box-info">
+      <strong>Komponen segitiga siku-siku (relatif terhadap sudut \(\theta\)):</strong><br>
+      • <strong>Sisi depan (opposite)</strong> — sisi di seberang sudut \(\theta\)<br>
+      • <strong>Sisi samping (adjacent)</strong> — sisi yang berdekatan dengan \(\theta\) (bukan hipotenusa)<br>
+      • <strong>Hipotenusa (hypotenuse)</strong> — sisi terpanjang, di seberang sudut siku-siku
+    </div>
+
+    <div class="box-formula">
+      <strong>Teorema Pythagoras (pengingat):</strong>
+      \[c^2 = a^2 + b^2\]
+      di mana \(c\) = hipotenusa, \(a\) dan \(b\) = sisi tegak lainnya.
+    </div>
+
+    <!-- 2. Rasio -->
+    <h2 id="rasio"><i class="fas fa-percentage text-primary"></i> 2. Rasio Trigonometri</h2>
+    <p>Enam rasio trigonometri utama untuk sudut \(\theta\) dalam segitiga siku-siku:</p>
+
+    <div class="box-formula">
+      <strong>SOH-CAH-TOA:</strong>
+      \[
+        \sin\theta = \frac{\text{depan}}{\text{hipotenusa}} \qquad
+        \cos\theta = \frac{\text{samping}}{\text{hipotenusa}} \qquad
+        \tan\theta = \frac{\text{depan}}{\text{samping}}
+      \]
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Fungsi</th><th>Definisi</th><th>Kebalikan (Resiprokal)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>\(\sin\theta\)</td><td>\(\dfrac{\text{opp}}{\text{hyp}}\)</td><td>\(\csc\theta = \dfrac{1}{\sin\theta}\)</td></tr>
+          <tr><td>\(\cos\theta\)</td><td>\(\dfrac{\text{adj}}{\text{hyp}}\)</td><td>\(\sec\theta = \dfrac{1}{\cos\theta}\)</td></tr>
+          <tr><td>\(\tan\theta\)</td><td>\(\dfrac{\text{opp}}{\text{adj}}\)</td><td>\(\cot\theta = \dfrac{1}{\tan\theta}\)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box-tip">
+      <strong>💡 Mnemonik:</strong> <strong>SOH</strong>–<strong>CAH</strong>–<strong>TOA</strong>
+      → Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent
+    </div>
+
+    <!-- 3. Sudut Istimewa -->
+    <h2 id="sudut-istimewa"><i class="fas fa-star text-primary"></i> 3. Nilai Sudut Istimewa</h2>
+    <p>Hafal tabel berikut untuk mempercepat perhitungan:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sudut (\(\theta\))</th>
+            <th>\(0°\)</th><th>\(30°\)</th><th>\(45°\)</th><th>\(60°\)</th><th>\(90°\)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>\(\sin\theta\)</strong></td>
+            <td>\(0\)</td>
+            <td>\(\dfrac{1}{2}\)</td>
+            <td>\(\dfrac{\sqrt{2}}{2}\)</td>
+            <td>\(\dfrac{\sqrt{3}}{2}\)</td>
+            <td>\(1\)</td>
+          </tr>
+          <tr>
+            <td><strong>\(\cos\theta\)</strong></td>
+            <td>\(1\)</td>
+            <td>\(\dfrac{\sqrt{3}}{2}\)</td>
+            <td>\(\dfrac{\sqrt{2}}{2}\)</td>
+            <td>\(\dfrac{1}{2}\)</td>
+            <td>\(0\)</td>
+          </tr>
+          <tr>
+            <td><strong>\(\tan\theta\)</strong></td>
+            <td>\(0\)</td>
+            <td>\(\dfrac{1}{\sqrt{3}}\)</td>
+            <td>\(1\)</td>
+            <td>\(\sqrt{3}\)</td>
+            <td>tak tentu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box-tip">
+      <strong>💡 Trik hafal \(\sin\):</strong>
+      \(\sin 0° = \tfrac{\sqrt{0}}{2}\), \(\sin 30° = \tfrac{\sqrt{1}}{2}\), \(\sin 45° = \tfrac{\sqrt{2}}{2}\), \(\sin 60° = \tfrac{\sqrt{3}}{2}\), \(\sin 90° = \tfrac{\sqrt{4}}{2}\)
+    </div>
+
+    <!-- 4. Identitas -->
+    <h2 id="identitas"><i class="fas fa-equals text-primary"></i> 4. Identitas Trigonometri Dasar</h2>
+    <div class="box-formula">
+      <strong>Identitas Pythagoras:</strong>
+      \[\sin^2\theta + \cos^2\theta = 1\]
+      \[1 + \tan^2\theta = \sec^2\theta\]
+      \[1 + \cot^2\theta = \csc^2\theta\]
+    </div>
+    <div class="box-formula">
+      <strong>Hubungan tan dan cot:</strong>
+      \[\tan\theta = \frac{\sin\theta}{\cos\theta} \qquad \cot\theta = \frac{\cos\theta}{\sin\theta}\]
+    </div>
+
+    <!-- 5. Kuadran -->
+    <h2 id="kuadran"><i class="fas fa-compass text-primary"></i> 5. Tanda pada Setiap Kuadran</h2>
+    <p>Pada koordinat kartesius, tanda nilai trigonometri bergantung pada kuadran sudut:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Kuadran</th><th>Sudut</th><th>\(\sin\)</th><th>\(\cos\)</th><th>\(\tan\)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>I</td><td>\(0° - 90°\)</td><td>+</td><td>+</td><td>+</td></tr>
+          <tr><td>II</td><td>\(90° - 180°\)</td><td>+</td><td>−</td><td>−</td></tr>
+          <tr><td>III</td><td>\(180° - 270°\)</td><td>−</td><td>−</td><td>+</td></tr>
+          <tr><td>IV</td><td>\(270° - 360°\)</td><td>−</td><td>+</td><td>−</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box-tip">
+      <strong>💡 Mnemonik:</strong> "<strong>S</strong>emua <strong>S</strong>iswa <strong>T</strong>ekun <strong>C</strong>erdas" → Kuadran I,II,III,IV: semua +, Sin +, Tan +, Cos + (berlawanan arah jarum jam mulai kuadran I).
+    </div>
+
+    <!-- 6. Contoh Soal -->
+    <h2 id="contoh-soal"><i class="fas fa-pencil-alt text-primary"></i> 6. Contoh Soal</h2>
+
+    <div class="box-example">
+      <strong>📝 Soal 1</strong> — Diketahui segitiga siku-siku dengan sisi depan = 3 dan hipotenusa = 5. Tentukan \(\sin\theta\), \(\cos\theta\), dan \(\tan\theta\).
+    </div>
+    <ol class="step-list">
+      <li><span class="step-num">1</span> Sisi samping = \(\sqrt{5^2 - 3^2} = \sqrt{16} = 4\).</li>
+      <li><span class="step-num">2</span> \(\sin\theta = \dfrac{3}{5}\), \(\cos\theta = \dfrac{4}{5}\), \(\tan\theta = \dfrac{3}{4}\). ✅</li>
+    </ol>
+
+    <div class="box-example">
+      <strong>📝 Soal 2</strong> — Hitung nilai \(\sin 135°\).
+    </div>
+    <ol class="step-list">
+      <li><span class="step-num">1</span> \(135° = 180° - 45°\) → berada di Kuadran II (sin positif).</li>
+      <li><span class="step-num">2</span> \(\sin(180° - 45°) = \sin 45° = \dfrac{\sqrt{2}}{2}\). ✅</li>
+    </ol>
+
+    <div class="box-example">
+      <strong>📝 Soal 3</strong> — Sederhanakan \(\dfrac{\sin^2\theta}{\cos^2\theta} + 1\).
+    </div>
+    <div class="math-display">
+      \[\frac{\sin^2\theta}{\cos^2\theta} + 1 = \tan^2\theta + 1 = \sec^2\theta\]
+    </div>
+    <p>✅ Menggunakan identitas Pythagoras \(1 + \tan^2\theta = \sec^2\theta\).</p>
+
+    <div class="box-warning">
+      <strong>⚠️ Perhatian:</strong> \(\cos 90° = 0\), sehingga \(\tan 90°\) dan \(\sec 90°\) tidak terdefinisi!
+    </div>
+
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Kelas Digital Matematika</div>
+  <div class="accent-line"></div>
+  <p>© 2026 · Tema NU Premium Aswaja · GitHub Pages</p>
+</footer>
+
+<!-- MathJax -->
+<script>
+  MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<script>
+  const btn = document.getElementById('btnDark');
+  const icon = document.getElementById('iconDark');
+  if (localStorage.getItem('darkMode') === '1') {
+    document.body.classList.add('dark-mode');
+    icon.className = 'fas fa-sun';
+  }
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('darkMode', isDark ? '1' : '0');
+  });
+</script>
+</body>
+</html>

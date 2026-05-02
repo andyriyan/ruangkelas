@@ -1,56 +1,309 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Materi Belajar</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Kelas Digital Matematika — kumpulan materi belajar interaktif berbasis HTML untuk siswa madrasah dan sekolah.">
+  <title>Kelas Digital — Ruang Matematika</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Search bar */
+    .search-wrap {
+      position: relative;
+      max-width: 400px;
+    }
+    .search-wrap input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-dark);
+      font-family: inherit;
+      font-size: .9rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .search-wrap input:focus { border-color: var(--primary); }
+    .search-wrap .search-icon {
+      position: absolute;
+      left: 14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-gray);
+      font-size: .85rem;
+    }
+
+    /* Filter chips */
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .chip {
+      padding: 6px 16px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-gray);
+      font-size: .8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit;
+    }
+    .chip.active, .chip:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Kelompok section */
+    .kelompok-label {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      color: var(--text-light);
+      margin-bottom: 14px;
+      padding-top: 8px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Repositori <span class="text-blue">Materi</span></h1>
-                <p>Kumpulan bahan ajar dan modul interaktif mandiri.</p>
-            </div>
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" role="navigation" aria-label="Menu utama">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand" aria-label="Beranda Kelas Digital">
+      <div class="brand-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <span>Kelas Digital</span>
+    </a>
+    <div class="navbar-actions">
+      <button class="btn-toggle-dark" id="btnDark" aria-label="Toggle mode gelap" title="Mode Gelap">
+        <i class="fas fa-moon" id="iconDark"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" aria-label="Selamat datang">
+  <div class="hero-deco hero-deco-1"></div>
+  <div class="hero-deco hero-deco-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge animate-in">
+      <i class="fas fa-star"></i> Kelas Digital Matematika
+    </div>
+    <h1 class="animate-in delay-1">
+      Belajar Matematika<br>Lebih <span class="accent">Menyenangkan</span>
+    </h1>
+    <p class="animate-in delay-2">
+      Kumpulan materi belajar interaktif yang dilengkapi rumus, contoh soal,
+      dan visualisasi — dirancang khusus untuk siswa madrasah &amp; sekolah.
+    </p>
+    <div class="hero-stats animate-in delay-3">
+      <div class="hero-stat">
+        <span class="num" id="statMateri">3</span>
+        <span class="label">Materi</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">∞</span>
+        <span class="label">Contoh Soal</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">100%</span>
+        <span class="label">Gratis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MATERI SECTION ═══ -->
+<main class="container" id="materi">
+
+  <div class="section-header animate-in delay-1">
+    <h2 class="section-title">Daftar Materi</h2>
+    <div class="search-wrap">
+      <i class="fas fa-search search-icon"></i>
+      <input type="search" id="searchInput" placeholder="Cari materi…" aria-label="Cari materi">
+    </div>
+  </div>
+
+  <!-- Filter Chips -->
+  <div class="filter-row" role="group" aria-label="Filter kategori">
+    <button class="chip active" data-filter="all">Semua</button>
+    <button class="chip" data-filter="aljabar">Aljabar</button>
+    <button class="chip" data-filter="geometri">Geometri</button>
+    <button class="chip" data-filter="trigonometri">Trigonometri</button>
+    <button class="chip" data-filter="logika">Logika</button>
+    <button class="chip" data-filter="statistika">Statistika</button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       GRID KARTU MATERI
+       Untuk menambah materi baru, copy satu blok
+       <article class="card"> … </article> di bawah
+       dan sesuaikan isi serta href-nya.
+       ════════════════════════════════════════════ -->
+  <div class="grid-container" id="gridMateri">
+
+    <!-- ── CARD 1 · Logika Dasar ── -->
+    <article class="card animate-in delay-1" data-tags="logika">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);">
+        <i class="fas fa-brain" style="font-size:2.8rem;color:#14532d;"></i>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="category">Logika</span>
+          <span class="card-level">Kelas X</span>
         </div>
-    </header>
+        <h3>Logika Dasar &amp; Proposisi</h3>
+        <p>Mengenal proposisi, tabel kebenaran, dan hukum-hukum logika dasar yang menjadi fondasi matematika.</p>
+        <a href="materi/logika-dasar.html" class="btn-main" id="linkLogikaDasar">
+          <i class="fas fa-book-open"></i> Buka Materi
+        </a>
+      </div>
+    </article>
 
-    <main class="container">
-        <div class="grid-container">
-            
-            <!-- CARD MATERI 1 -->
-            <article class="card">
-                <div class="card-accent"></div>
-                <div class="card-body">
-                    <span class="category">Matematika</span>
-                    <h3>Logika Dasar</h3>
-                    <p>Mengenal proposisi, tabel kebenaran, dan hukum-hukum logika dasar.</p>
-                    <a href="materi/logika-dasar.html" class="btn-main">Buka Materi</a>
-                </div>
-            </article>
-
-            <!-- TEMPLATE UNTUK COPY-PASTE (Materi Baru) -->
-            <article class="card">
-                <div class="card-accent" style="background: var(--success);"></div>
-                <div class="card-body">
-                    <span class="category">Kategori Baru</span>
-                    <h3>Judul Materi Anda</h3>
-                    <p>Tuliskan deskripsi singkat materi di sini supaya mudah dipahami.</p>
-                    <a href="materi/nama-file.html" class="btn-main">Buka Materi</a>
-                </div>
-            </article>
-
+    <!-- ── CARD 2 · Persamaan Kuadrat ── -->
+    <article class="card animate-in delay-2" data-tags="aljabar">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#fefce8,#fef9c3);">
+        <i class="fas fa-superscript" style="font-size:2.8rem;color:#ca8a04;"></i>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="category">Aljabar</span>
+          <span class="card-level">Kelas IX</span>
         </div>
-    </main>
+        <h3>Persamaan Kuadrat</h3>
+        <p>Memahami bentuk umum \(ax^2+bx+c=0\), metode penyelesaian, diskriminan, dan hubungan akar.</p>
+        <a href="materi/persamaan-kuadrat.html" class="btn-main" id="linkPersamaanKuadrat">
+          <i class="fas fa-book-open"></i> Buka Materi
+        </a>
+      </div>
+    </article>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Portal Belajar Anda. Dihosting di GitHub Pages.</p>
+    <!-- ── CARD 3 · Trigonometri ── -->
+    <article class="card animate-in delay-3" data-tags="trigonometri">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);">
+        <i class="fas fa-drafting-compass" style="font-size:2.8rem;color:#0ea5e9;"></i>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="category">Trigonometri</span>
+          <span class="card-level">Kelas X</span>
         </div>
-    </footer>
+        <h3>Pengenalan Trigonometri</h3>
+        <p>Rasio trigonometri, nilai-nilai sudut istimewa, dan identitas dasar sin, cos, tan pada segitiga siku-siku.</p>
+        <a href="materi/trigonometri.html" class="btn-main" id="linkTrigonometri">
+          <i class="fas fa-book-open"></i> Buka Materi
+        </a>
+      </div>
+    </article>
 
+
+    <!-- ════════════════════════════════════════
+         ✏️  TEMPLATE CARD — COPY DARI SINI
+         Duplikat blok di bawah untuk materi baru
+         ════════════════════════════════════════
+    <article class="card" data-tags="KATEGORI">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);">
+        <i class="fas fa-ICON" style="font-size:2.8rem;color:#14532d;"></i>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="category">KATEGORI</span>
+          <span class="card-level">Kelas X</span>
+        </div>
+        <h3>JUDUL MATERI</h3>
+        <p>Deskripsi singkat materi yang akan ditampilkan di kartu ini.</p>
+        <a href="materi/NAMAFILE.html" class="btn-main">
+          <i class="fas fa-book-open"></i> Buka Materi
+        </a>
+      </div>
+    </article>
+         ✏️  SAMPAI SINI
+         ════════════════════════════════════════ -->
+
+  </div><!-- /grid-container -->
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-brand">Kelas Digital Matematika</div>
+  <div class="accent-line"></div>
+  <p>Dibuat dengan ❤️ untuk siswa — dihosting di GitHub Pages</p>
+  <p style="margin-top:6px;font-size:.8rem;">© 2026 · Tema NU Premium Aswaja</p>
+</footer>
+
+<!-- ═══ MATHJAX 3 ═══ -->
+<script>
+  MathJax = {
+    tex: { inlineMath: [['\\(','\\)'], ['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+  // ─── Dark mode toggle ───────────────────────
+  const btn     = document.getElementById('btnDark');
+  const icon    = document.getElementById('iconDark');
+  const body    = document.body;
+
+  // Restore preference
+  if (localStorage.getItem('darkMode') === '1') {
+    body.classList.add('dark-mode');
+    icon.className = 'fas fa-sun';
+  }
+
+  btn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('darkMode', isDark ? '1' : '0');
+  });
+
+  // ─── Search ─────────────────────────────────
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', filterCards);
+
+  // ─── Filter chips ────────────────────────────
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      filterCards();
+    });
+  });
+
+  function filterCards() {
+    const query  = searchInput.value.toLowerCase().trim();
+    const filter = document.querySelector('.chip.active')?.dataset.filter || 'all';
+    const cards  = document.querySelectorAll('#gridMateri .card');
+
+    cards.forEach(card => {
+      const tags  = card.dataset.tags || '';
+      const text  = card.innerText.toLowerCase();
+      const tagOk = filter === 'all' || tags.includes(filter);
+      const txtOk = !query || text.includes(query);
+      card.style.display = (tagOk && txtOk) ? '' : 'none';
+    });
+  }
+
+  // ─── Update stat counter ─────────────────────
+  const count = document.querySelectorAll('#gridMateri .card').length;
+  document.getElementById('statMateri').textContent = count;
+</script>
 </body>
 </html>
